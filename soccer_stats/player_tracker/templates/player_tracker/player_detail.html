@@ -1,0 +1,12 @@
+{% extends 'player_tracker/base.html' %} {% block content %}
+<h1>{{ player.name }}</h1>
+<p>Team: {{ player.team.name }}</p>
+<p>Position: {{ player.position }}</p>
+<h2>Stats:</h2>
+<ul>
+  <li>Total Goals: {{ total_goals }}</li>
+  <li>Total Assists: {{ total_assists }}</li>
+  <li>Average Passes per Game: {{ avg_passes }}</li>
+  <li>Average Tackles per Game: {{ avg_tackles }}</li>
+</ul>
+{% endblock %}

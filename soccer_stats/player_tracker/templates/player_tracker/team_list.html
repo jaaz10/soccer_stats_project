@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soccer Teams</title>
+</head>
+<body>
+    <h1>Soccer Teams</h1>
+    <ul>
+    {% for team in teams %}
+        <li>{{ team.name }}</li>
+    {% endfor %}
+    </ul>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>

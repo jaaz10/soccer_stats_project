@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Soccer Players</title>
+  </head>
+  <body>
+    <h1>Soccer Players</h1>
+    <ul>
+      {% for player in players %}
+      <li>{{ player.name }} - {{ player.team.name }}</li>
+      {% endfor %}
+    </ul>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+  </body>
+</html>

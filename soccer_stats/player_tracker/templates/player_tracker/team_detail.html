@@ -1,0 +1,11 @@
+{% extends 'player_tracker/base.html' %} {% block content %}
+<h1>{{ object.name }}</h1>
+<h2>Players:</h2>
+<ul>
+  {% for player in object.player_set.all %}
+  <li><a href="{% url 'player_detail' player.pk %}">{{ player.name }}</a></li>
+  {% endfor %}
+</ul>
+<h2>Team Goals:</h2>
+<img src="data:image/png;base64,{{ graphic }}" alt="Team Goals Graph" />
+{% endblock %}
